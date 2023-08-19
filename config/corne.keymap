@@ -13,12 +13,12 @@
 
 / {
    behaviors {
-      tdb: tap_backspace {
+      td0: tap_dance_0 {
          compatible = "zmk,behavior-tap-dance";
-         label = "TAP_DANCE_BACKSPACE";
+         label = "TAP_DANCE_0";
          #binding-cells = <0>;
          tapping-term-ms = <200>;
-         bindings = <&kp BACKSPACE>, <&kp DELETE>, <&kp ESCAPE>;
+         bindings = <&kp N1>, <&kp N2>, <&kp N3>;
       };
       as: auto_shift {
          compatible = "zmk,behavior-hold-tap";
@@ -52,7 +52,7 @@
    &none  AS(Q) &kp W &kp F &kp P &kp G     &kp J &kp L  &kp U     &kp Y   &kp SEMI &none
    &none  &kp A &hm LCTRL R &hm LALT S &hm LGUI T &kp D  &kp H &hm RGUI N  &hm RALT E     &hm RCTRL I   &kp O    &none
    &none  &kp Z &kp X &kp C &kp V &kp B     &kp K &kp M  &kp COMMA &kp DOT &kp FSLH &none
-                      &none &kp LSHIFT &kp tdb   &kp SPACE &kp RSHIFT &none
+                      &none &kp LSHIFT &kp td0   &kp SPACE &kp RSHIFT &none
                         >;
                 };
       lower_layer {

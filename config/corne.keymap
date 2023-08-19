@@ -86,10 +86,10 @@
 // |  --  |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  --  |
 // |  --  |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  --  |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
-   &none  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &none
-   &none  &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &none
-   &none  &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &none
-                    	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
+   &none  &kp F1 &kp F2            &kp F3          &kp F4     &kp F5  &kp F6          &kp F7   &kp F8   &kp F9   &kp F10   &none
+   &none  &none  &kp K_VOLUME_DOWN &kp K_VOLUME_UP &kp K_MUTE &kp F11 &kp F12         &kp LEFT &kp DOWN &kp UP   &kp RIGHT &none
+   &none  &none  &C_BRI_DN         &kp C_BRI_UP    &none      &none   &kp PRINTSCREEN &none    &none    &none    &none     &none
+                    	              &trans          &trans     &trans  &trans          &trans   &trans
          >;
       };
    };

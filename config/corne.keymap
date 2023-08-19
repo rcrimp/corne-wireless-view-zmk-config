@@ -19,7 +19,7 @@
          label = "TAP_DANCE_0";
          #binding-cells = <0>;
          tapping-term-ms = <200>;
-         bindings = <&kp N1>, <&kp N2>, <&kp N3>;
+         bindings = <&kp BACKSPACE>, <&kp DELETE>, <&kp ESC>;
       };
       as: auto_shift {
          compatible = "zmk,behavior-hold-tap";
@@ -44,7 +44,7 @@
    &none  AS(Q) &kp W &kp F &kp P &kp G     &kp J &kp L  &kp U     &kp Y   &kp SEMI &none
    &none  &kp A &kp R &kp S &kp T &kp D     &kp H &kp N  &kp E     &kp I   &kp O    &none
    &none  &kp Z &kp X &kp C &kp V &kp B     &kp K &kp M  &kp COMMA &kp DOT &kp FSLH &none
-                      &td0 &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
+                      &none &kp RSHIFT &td0   &kp SPACE &kp LSHIFT &kp RALT
                         >;
                 };
       lower_layer {

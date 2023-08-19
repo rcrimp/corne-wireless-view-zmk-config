@@ -10,7 +10,7 @@
 // #include <dt-bindings/zmk/mouse.h>
 
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
-
+#define HM(k1, k2) &hm k1 k2     // Homerow Mods Macro
 
 / {
    behaviors {
@@ -59,9 +59,9 @@
 // |  --  |  Z  |  X  |  C  |  V  |  B  |   |  K  |  M   |  ,      |  .    |  /     |  --  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
    &none  AS(Q) AS(W) AS(F) AS(P) AS(G)     AS(J) AS(L)  AS(U) AS(Y) AS(SEMI) &none
-   &none  AS(A) &hm LCTRL R &hm LALT S &hm LGUI T AS(D)  AS(H) &hm RGUI N &hm RALT E &hm RCTRL I AS(O) &none
+   &none  AS(A) HM(LCTRL, R) HM(LALT, S) HM(LGUI, T) AS(D)  AS(H) HM(RGUI, N) HM(RALT, E) HM(RCTRL, I) AS(O) &none
    &none  AS(Z) AS(X) AS(C) AS(V) AS(B)     AS(K) AS(M)  AS(COMMA) AS(DOT) AS(FSLH) &none
-                      &none &kp BACKSPACE &kp LSHIFT   &kp RSHIFT &kp LSHIFT &kp RETURN
+                      &none &kp BACKSPACE &kp LSHIFT   &kp RSHIFT &kp SPACE &kp RETURN
                         >;
                 };
       lower_layer {

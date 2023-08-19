@@ -12,6 +12,10 @@
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
 #define HM(k1, k2) &hm k1 k2     // Homerow Mods Macro
 
+#define BASE 0
+#define FUNCTIONS   1
+#define SYMBOLS   2
+
 / {
    behaviors {
       // td0: tap_dance_0 {
@@ -88,7 +92,7 @@
 //                    | GUI |     | SPC |   | ENT |     | ALT |
    &none  &kp F1 &kp F2            &kp F3          &kp F4     &kp F5  &kp F6          &kp F7   &kp F8   &kp F9   &kp F10   &none
    &none  &none  &kp K_VOLUME_DOWN &kp K_VOLUME_UP &kp K_MUTE &kp F11 &kp F12         &kp LEFT &kp DOWN &kp UP   &kp RIGHT &none
-   &none  &none  &C_BRI_DN         &kp C_BRI_UP    &none      &none   &kp PRINTSCREEN &none    &none    &none    &none     &none
+   &none  &none  &kp C_BRI_DN      &kp C_BRI_UP    &none      &none   &kp PRINTSCREEN &none    &none    &none    &none     &none
                     	              &trans          &trans     &trans  &trans          &trans   &trans
          >;
       };

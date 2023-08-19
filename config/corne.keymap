@@ -23,7 +23,16 @@
          label = "TAP_DANCE_0";
          #binding-cells = <0>;
          tapping-term-ms = <200>;
-         bindings = <&mt LSHFT SPACE>, <&mo 1>, <&mo 2>;
+         // bindings = <&mt LSHFT SPACE>, <&mo 1>, <&mo 2>;
+         bindings = <&kp LSHFT, <&mo 1>, <&mo 2>;
+      };
+      td1: tap_dance_1 {
+         compatible = "zmk,behavior-tap-dance";
+         label = "TAP_DANCE_1";
+         #binding-cells = <0>;
+         tapping-term-ms = <200>;
+         // bindings = <&mt LSHFT SPACE>, <&mo 1>, <&mo 2>;
+         bindings = <&kp RSHFT, <&mo 2>, <&mo 1>;
       };
       as: auto_shift {
          compatible = "zmk,behavior-hold-tap";
@@ -64,7 +73,7 @@
    &none  AS(Q) AS(W) AS(F) AS(P) AS(G)     AS(J) AS(L)  AS(U) AS(Y) AS(SEMI) &none
    &none  AS(A) HM(LCTRL, R) HM(LALT, S) HM(LGUI, T) AS(D)  AS(H) HM(RGUI, N) HM(RALT, E) HM(RCTRL, I) AS(O) &none
    &none  AS(Z) AS(X) AS(C) AS(V) AS(B)     AS(K) AS(M)  AS(COMMA) AS(DOT) AS(FSLH) &none
-                      &td0 &kp BACKSPACE &kp LSHIFT   &kp RSHIFT &kp SPACE &kp RETURN
+                      &kp TAB &kp BACKSPACE &td0   &td1 &kp SPACE &kp RETURN
                         >;
                 };
       lower_layer {

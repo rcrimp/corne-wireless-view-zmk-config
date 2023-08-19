@@ -17,18 +17,18 @@
 #define SYMBOLS   2
 
 / {
-   // macros {
-   //      delete_word: delete_word {
-   //          label = "Delete_Word";
-   //          compatible = "zmk,behavior-macro";
-   //          #binding-cells = <0>;
-   //          bindings
-   //              = <&macro_press &kp LCTRL>
-   //              , <&macro_tap &kp BACKSPACE>
-   //              , <&macro_release &kp LCTRL>
-   //              ;
-   //      };
-   // };
+   macros {
+        delete_word: delete_word {
+            label = "Delete_Word";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp BACKSPACE>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+   };
    behaviors {
       td0: tap_dance_0 {
          compatible = "zmk,behavior-tap-dance";
@@ -45,6 +45,13 @@
          tapping-term-ms = <200>;
          // bindings = <&mt LSHFT SPACE>, <&mo 1>, <&mo 2>;
          bindings = <&kp RSHFT>, <&mo 2>, <&mo 1>;
+      };
+      td2: tap_dance_2 {
+         compatible = "zmk,behavior-tap-dance";
+         label = "TAP_DANCE_2";
+         #binding-cells = <0>;
+         tapping-term-ms = <200>;
+         bindings = <&kp BACKSPACE>, <&delete_word>, <&kp delete>;
       };
       as: auto_shift {
          compatible = "zmk,behavior-hold-tap";
@@ -85,7 +92,7 @@
    &none  AS(Q) AS(W) AS(F) AS(P) AS(G)     AS(J) AS(L)  AS(U) AS(Y) AS(SEMI) &none
    &none  AS(A) HM(LCTRL, R) HM(LALT, S) HM(LGUI, T) AS(D)  AS(H) HM(RGUI, N) HM(RALT, E) HM(RCTRL, I) AS(O) &none
    &none  AS(Z) AS(X) AS(C) AS(V) AS(B)     AS(K) AS(M)  AS(COMMA) AS(DOT) AS(FSLH) &none
-                      &kp TAB &kp BACKSPACE &td0   &td1 &kp SPACE &kp RETURN
+                      &kp TAB &td2 &td0   &td1 &kp SPACE &kp RETURN
                         >;
                 };
       lower_layer {

@@ -17,6 +17,18 @@
 #define SYMBOLS   2
 
 / {
+   // macros {
+   //      delete_word: delete_word {
+   //          label = "Delete_Word";
+   //          compatible = "zmk,behavior-macro";
+   //          #binding-cells = <0>;
+   //          bindings
+   //              = <&macro_press &kp LCTRL>
+   //              , <&macro_tap &kp BACKSPACE>
+   //              , <&macro_release &kp LCTRL>
+   //              ;
+   //      };
+   // };
    behaviors {
       td0: tap_dance_0 {
          compatible = "zmk,behavior-tap-dance";
@@ -73,7 +85,7 @@
    &none  AS(Q) AS(W) AS(F) AS(P) AS(G)     AS(J) AS(L)  AS(U) AS(Y) AS(SEMI) &none
    &none  AS(A) HM(LCTRL, R) HM(LALT, S) HM(LGUI, T) AS(D)  AS(H) HM(RGUI, N) HM(RALT, E) HM(RCTRL, I) AS(O) &none
    &none  AS(Z) AS(X) AS(C) AS(V) AS(B)     AS(K) AS(M)  AS(COMMA) AS(DOT) AS(FSLH) &none
-                      &kpy TAB &kp BACKSPACE &td0   &td1 &kp SPACE &kp RETURN
+                      &kp TAB &kp BACKSPACE &td0   &td1 &kp SPACE &kp RETURN
                         >;
                 };
       lower_layer {

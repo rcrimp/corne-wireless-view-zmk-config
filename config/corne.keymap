@@ -13,12 +13,12 @@
 
 / {
    behaviors {
-      td0: tap_dance_0 {
+      tdb: tap_backspace {
          compatible = "zmk,behavior-tap-dance";
-         label = "TAP_DANCE_0";
+         label = "TAP_DANCE_BACKSPACE";
          #binding-cells = <0>;
          tapping-term-ms = <200>;
-         bindings = <&kp N1>, <&kp N2>, <&kp N3>;
+         bindings = <&kp BACKSPACE>, <&kp DELETE>, <&kp ESCAPE>;
       };
       as: auto_shift {
          compatible = "zmk,behavior-hold-tap";
@@ -26,6 +26,15 @@
          #binding-cells = <2>;
          tapping_term_ms = <135>;
          quick_tap_ms = <0>;
+         flavor = "tap-preferred";
+         bindings = <&kp>, <&kp>;
+      };
+      hm: homerow_mods {
+         compatible = "zmk,behavior-hold-tap";
+         label = "HOMEROW_MODS";
+         #binding-cells = <2>;
+         tapping-term-ms = <150>;
+         quick-tap-ms = <0>;
          flavor = "tap-preferred";
          bindings = <&kp>, <&kp>;
       };
@@ -41,9 +50,9 @@
 // |  --  |  Z  |  X  |  C  |  V  |  B  |   |  K  |  M   |  ,      |  .    |  /     |  --  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
    &none  AS(Q) &kp W &kp F &kp P &kp G     &kp J &kp L  &kp U     &kp Y   &kp SEMI &none
-   &none  &kp A &kp R &kp S &kp T &kp D     &kp H &kp N  &kp E     &kp I   &kp O    &none
+   &none  &kp A &hm LCTRL R &hm LALT S &hm LGUI T &kp D  &kp H &hm RGUI N  &hm RALT E     &hm RCTRL I   &kp O    &none
    &none  &kp Z &kp X &kp C &kp V &kp B     &kp K &kp M  &kp COMMA &kp DOT &kp FSLH &none
-                      &td0 &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
+                      &none &kp LSHIFT &kp tdb   &kp SPACE &kp RSHIFT &none
                         >;
                 };
       lower_layer {

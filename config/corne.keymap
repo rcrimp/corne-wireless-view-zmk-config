@@ -61,7 +61,7 @@
    &none  AS(Q) AS(W) AS(F) AS(P) AS(G)     AS(J) AS(L)  AS(U) AS(Y) AS(SEMI) &none
    &none  AS(A) &hm LCTRL R &hm LALT S &hm LGUI T AS(D)  AS(H) &hm RGUI N &hm RALT E &hm RCTRL I AS(O) &none
    &none  AS(Z) AS(X) AS(C) AS(V) AS(B)     AS(K) AS(M)  AS(COMMA) AS(DOT) AS(FSLH) &none
-                      &none &kp BACKSPACE &LSHIFT   &kp RSHIFT &kp LSHIFT &kp RETURN
+                      &none &kp BACKSPACE &kp LSHIFT   &kp RSHIFT &kp LSHIFT &kp RETURN
                         >;
                 };
       lower_layer {

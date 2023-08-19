@@ -64,23 +64,23 @@
                         >;
                 };
       lower_layer {
-         label = "Lower";
+         label = "Symbols";
          bindings = <
 // -----------------------------------------------------------------------------------------
 // |  --  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |  --  |
 // |  --  | BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |  --  |
 // |  --  |     |     |     |     |     |   |     |     |     |     |     |  --  |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
-   &none  &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &none
-   &none  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &none
-   &none  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &none
-                          	        &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
+   &none  &kp N1    &kp N2   &kp N3    &kp N4    &kp N5    &kp N6   &kp N7    &kp N8   &kp N9    &kp N0     &none
+   &none  &kp LT    &kp LBKT &kp LBRC  &kp LPAR  &kp DQT   &kp SQT  &kp RPAR  &kp RBRC &kp RBKT  &kp GT     &none
+   &none  &kp GRAVE &kp PIPE &kp UNDER &kp MINUS &kp FSLH  &kp BSLH &kp TILDE &kp PLUS &kp EQUAL &kp QMARK  &none
+                          	  &trans    &trans    &trans    &trans   &trans    &trans
                         >;
-                };
+      };
 
-                raise_layer {
-                        label = "Raise";
-                        bindings = <
+      raise_layer {
+         label = "Function";
+         bindings = <
 // -----------------------------------------------------------------------------------------
 // |  --  |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |  --  |
 // |  --  |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  --  |
@@ -90,7 +90,7 @@
    &none  &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &none
    &none  &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &none
                     	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
-                        >;
-                };
-        };
+         >;
+      };
+   };
 };

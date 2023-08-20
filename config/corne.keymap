@@ -40,14 +40,14 @@
          label = "TAP_DANCE_0";
          #binding-cells = <0>;
          tapping-term-ms = <200>;
-         bindings = <&lt 1 DELETE>, <&tog 1>;
+         bindings = <&lt 1 DELETE>, <&tog 1>, <&to 0>;
       };
       td1: tap_dance_1 {
          compatible = "zmk,behavior-tap-dance";
          label = "TAP_DANCE_1";
          #binding-cells = <0>;
          tapping-term-ms = <200>;
-         bindings = <&lt 2 RETURN>, <&tog 2>;
+         bindings = <&lt 2 RETURN>, <&tog 2>, <&to 0>;
       };
       td2: tap_dance_2 {
          compatible = "zmk,behavior-tap-dance";
@@ -101,7 +101,7 @@
 //├─────┤├───────────┼───────────┼────────────┼────────────┼─────┤ ├─────┼────────────┼────────────┼───────────┼───────────┤├─────┤
    &none  AS(Z)       AS(X)       AS(C)        AS(V)        AS(B)   AS(K) AS(M)        &kp COMMA    &kp DOT     &kp FSLH     &none
 //╰─────╯╰───────────┴───────────┼────────────┼────────────┼─────┤ ├─────┼────────────┼────────────┴───────────────────────╯╰─────╯
-                                  &kp TAB      &td2         &td0    &td1  &kp SPACE    &kp RETURN 
+                                  &kp TAB      &td2         &td0    &td1  &kp SPACE    &kp TAB 
 //                               ╰────────────┴────────────┴─────╯ ╰─────┴────────────┴────────────╯
 >;
                 };

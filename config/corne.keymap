@@ -40,14 +40,14 @@
          label = "TAP_DANCE_0";
          #binding-cells = <0>;
          tapping-term-ms = <200>;
-         bindings = <&kp LSHFT>, <&mo 1>;
+         bindings = <&lt 1 DELETE>, <&tog 1>;
       };
       td1: tap_dance_1 {
          compatible = "zmk,behavior-tap-dance";
          label = "TAP_DANCE_1";
          #binding-cells = <0>;
          tapping-term-ms = <200>;
-         bindings = <&kp RSHFT>, <&mo 2>;
+         bindings = <&lt 2 RETURN>, <&tog 2>;
       };
       td2: tap_dance_2 {
          compatible = "zmk,behavior-tap-dance";
@@ -115,7 +115,7 @@
 //├─────┤├────────┼────────┼─────────┼─────────┼─────────┤ ├─────────┼─────────────┼────────┼────────┼──────┤├─────┤
    &none  &none    &none    &kp EQUAL &kp TILDE &kp MINUS   &kp UNDER &kp PIPE      &trans   &trans   &trans  &none
 //╰─────╯╰────────┴────────┼─────────┼─────────┼─────────┤ ├─────────┼─────────────┼────────┴───────────────╯╰─────╯
-                          	 &trans    &trans    &to 0      &to 0      &trans        &trans
+                          	 &trans    &trans    &trans      &trans    &trans        &trans
 //                         ╰─────────┴─────────┴─────────╯ ╰─────────┴─────────────┴────────╯
 >;
       };
@@ -130,7 +130,7 @@
 //├─────┤├────────┼────────┼─────────┼──────────┼───────┤ ├───────┼────────┼────────┼──────┼─────────┤├─────┤
    &none  &kp F1   &kp F2   &kp F3    &kp F4     &kp F5    &kp F6  &kp F7   &kp F8   &kp F9 &kp F10    &none
 //╰─────╯╰────────┴────────┼─────────┼──────────┼───────┤ ├───────┼────────┼────────┴────────────────╯╰─────╯
-                    	       &trans    &trans     &to 0     &to 0   &trans   &trans
+                    	       &trans    &trans     &trans    &trans  &trans   &trans
 //                         ╰─────────┴──────────┴───────╯ ╰───────┴────────┴────────╯
 >;
       };
@@ -144,7 +144,7 @@
 //├─────┤├──────────┼──────────┼────────┼────────────┼────────────┤ ├────────────┼────────────┼────────────┼────────────┼────────────┤├─────┤
    &none  &none      &none      &none    &kp K_VOL_DN &kp C_BRI_DN   &none        &none        &none        &none        &none         &none
 //╰─────╯╰──────────┴──────────┼────────┼────────────┼────────────┤ ├────────────┼────────────┼────────────┴─────────────────────────╯╰─────╯
-                    	           &trans   &trans       &to 0          &to 0        &trans       &trans
+                    	           &trans   &trans       &trans         &trans       &trans       &trans
 //                             ╰────────┴────────────┴────────────╯ ╰────────────┴────────────┴────────────╯
 >;
       };

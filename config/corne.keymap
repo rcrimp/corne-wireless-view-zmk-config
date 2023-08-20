@@ -138,7 +138,7 @@
          label = "LEFT_HOMEROW_MODS";
          #binding-cells = <2>;
          tapping-term-ms = <150>;
-         quick-tap-ms = <200>;
+         quick-tap-ms = <0>;
          flavor = "tap-unless-interrupted";
          bindings = <&kp>, <&kp>;
          hold-trigger-key-positions = <KEYS_R>;
@@ -148,7 +148,7 @@
          label = "RIGHT_HOMEROW_MODS";
          #binding-cells = <2>;
          tapping-term-ms = <150>;
-         quick-tap-ms = <200>;
+         quick-tap-ms = <0>;
          flavor = "tap-unless-interrupted";
          bindings = <&kp>, <&kp>;
          hold-trigger-key-positions = <KEYS_L>;

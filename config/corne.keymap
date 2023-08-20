@@ -14,6 +14,12 @@
 #define NUM_L 2
 #define HARDWARE_L 3
 
+#define NAV_LEFT  &mt_home 0   LEFT    // tap: left  | long-tap: beginning of line
+#define NAV_RIGHT &mt_end 0    RIGHT   // tap: right | long-tap: end       of line
+#define NAV_UP    &mt LC(HOME) UP      // tap: up    | long-tap: beginning of document
+#define NAV_DOWN  &mt LC(END)  DOWN    // tap: down  | long-tap: end       of document
+#define NAV_BSPC  &mt LC(BSPC) BSPC    // tap: bspc  | long-tap: delete word backward
+
 / {
    conditional_layers {
       compatible = "zmk,conditional-layers";
@@ -22,18 +28,18 @@
          then-layer = <3>;
       };
    };
-   macros {
-        delete_word: delete_word {
-            label = "Delete_Word";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp BACKSPACE>
-                , <&macro_release &kp LCTRL>
-                ;
-        };
-   };
+   // macros {
+   //      delete_word: delete_word {
+   //          label = "Delete_Word";
+   //          compatible = "zmk,behavior-macro";
+   //          #binding-cells = <0>;
+   //          bindings
+   //              = <&macro_press &kp LCTRL>
+   //              , <&macro_tap &kp BACKSPACE>
+   //              , <&macro_release &kp LCTRL>
+   //              ;
+   //      };
+   // };
    behaviors {
       td0: tap_dance_0 {
          compatible = "zmk,behavior-tap-dance";
@@ -49,13 +55,13 @@
          tapping-term-ms = <200>;
          bindings = <&lt 2 RETURN>, <&tog 2>, <&to 0>;
       };
-      tdbs: tap_dance_bs {
-         compatible = "zmk,behavior-tap-dance";
-         label = "TAP_DANCE_BS";
-         #binding-cells = <0>;
-         tapping-term-ms = <200>;
-         bindings = <&kp BACKSPACE>, <&delete_word>;
-      };
+      // tdbs: tap_dance_bs {
+      //    compatible = "zmk,behavior-tap-dance";
+      //    label = "TAP_DANCE_BS";
+      //    #binding-cells = <0>;
+      //    tapping-term-ms = <200>;
+      //    bindings = <&kp BACKSPACE>, <&delete_word>;
+      // };
       tdqt: tap_dance_qt {
          compatible = "zmk,behavior-tap-dance";
          label = "TAP_DANCE_QT";
@@ -101,7 +107,7 @@
 //├─────┤├───────────┼───────────┼────────────┼────────────┼─────┤ ├─────┼────────────┼────────────┼───────────┼───────────┤├─────┤
    &none  AS(Z)       AS(X)       AS(C)        AS(V)        AS(B)   AS(K) AS(M)        &kp COMMA    &kp DOT     &kp FSLH     &none
 //╰─────╯╰───────────┴───────────┼────────────┼────────────┼─────┤ ├─────┼────────────┼────────────┴───────────────────────╯╰─────╯
-                                  &kp TAB      &tdbs        &td0    &td1  &kp SPACE    &kp TAB 
+                                  &kp TAB      NAV_BSPC     &td0    &td1  &kp SPACE    &kp TAB 
 //                               ╰────────────┴────────────┴─────╯ ╰─────┴────────────┴────────────╯
 >;
                 };
@@ -126,7 +132,7 @@
 //╭─────╮╭────────┬────────┬─────────┬──────────┬───────╮ ╭───────┬────────┬────────┬──────┬─────────╮╭─────╮
    &none  &kp N1   &kp N2   &kp N3    &kp N4     &kp N5    &kp N6  &kp N7   &kp N8   &kp N9 &kp N0     &none
 //├─────┤├────────┼────────┼─────────┼──────────┼───────┤ ├───────┼────────┼────────┼──────┼─────────┤├─────┤
-   &none  &kp LGUI &kp LALT &kp LCTRL &kp LSHIFT &kp F11   &kp F12 &kp LEFT &kp DOWN &kp UP &kp RIGHT  &none
+   &none  &kp LGUI &kp LALT &kp LCTRL &kp LSHIFT &kp F11   &kp F12 &kp NAV_LEFT &kp NAV_DOWN &kp NAV_UP &kp NAV_RIGHT  &none
 //├─────┤├────────┼────────┼─────────┼──────────┼───────┤ ├───────┼────────┼────────┼──────┼─────────┤├─────┤
    &none  &kp F1   &kp F2   &kp F3    &kp F4     &kp F5    &kp F6  &kp F7   &kp F8   &kp F9 &kp F10    &none
 //╰─────╯╰────────┴────────┼─────────┼──────────┼───────┤ ├───────┼────────┼────────┴────────────────╯╰─────╯

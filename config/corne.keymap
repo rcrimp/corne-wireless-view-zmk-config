@@ -50,6 +50,7 @@
          label = "TAP_DANCE_0";
          #binding-cells = <0>;
          tapping-term-ms = <200>;
+         flavor = "hold-preferred";
          bindings = <&lt 1 DELETE>, <&tog 1>, <&to 0>;
       };
       td1: tap_dance_1 {
@@ -57,6 +58,7 @@
          label = "TAP_DANCE_1";
          #binding-cells = <0>;
          tapping-term-ms = <200>;
+         flavor = "hold-preferred";
          bindings = <&lt 2 RETURN>, <&tog 2>, <&to 0>;
       };
       // tdbs: tap_dance_bs {

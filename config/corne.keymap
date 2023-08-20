@@ -22,7 +22,7 @@
 #define NAV_DOWN  &mt LC(END)  DOWN    // tap: down  | long-tap: end       of document
 #define NAV_BSPC  &mt LC(BSPC) BSPC    // tap: bspc  | long-tap: delete word backward
 
-
+#define MO_TOG(layer) &mo_tog layer layer
 
 / {
    conditional_layers {
@@ -45,22 +45,22 @@
    //      };
    // };
    behaviors {
-      td0: tap_dance_0 {
-         compatible = "zmk,behavior-hold-tap";
-         label = "TAP_DANCE_0";
-         #binding-cells = <0>;
-         flavor = "hold-preferred";
-         tapping-term-ms = <200>;
-         bindings = <&mo 1>, <&kp DELETE>;
-      };
-      td1: tap_dance_1 {
-         compatible = "zmk,behavior-hold-tap";
-         label = "TAP_DANCE_1";
-         #binding-cells = <0>;
-         flavor = "hold-preferred";
-         tapping-term-ms = <200>;
-         bindings = <&mo 2>, <&kp RETURN>;
-      };
+      // td0: tap_dance_0 {
+      //    compatible = "zmk,behavior-hold-tap";
+      //    label = "TAP_DANCE_0";
+      //    #binding-cells = <2>;
+      //    flavor = "hold-preferred";
+      //    tapping-term-ms = <200>;
+      //    bindings = <&mo>, <&kp>;
+      // };
+      // td1: tap_dance_1 {
+      //    compatible = "zmk,behavior-hold-tap";
+      //    label = "TAP_DANCE_1";
+      //    #binding-cells = <0>;
+      //    flavor = "hold-preferred";
+      //    tapping-term-ms = <200>;
+      //    bindings = <&mo 2>, <&kp RETURN>;
+      // };
       // tdbs: tap_dance_bs {
       //    compatible = "zmk,behavior-tap-dance";
       //    label = "TAP_DANCE_BS";
@@ -129,6 +129,14 @@
          flavor = "tap-preferred";
          bindings = <&kp>, <&kp>;
       };
+      mo_tog: behavior_mo_tog {
+         compatible = "zmk,behavior-hold-tap";
+         label = "mo_tog";
+         #binding-cells = <2>;
+         flavor = "hold-preferred";
+         tapping-term-ms = <200>;
+         bindings = <&mo>, <&tog>;
+      };
    };
    keymap {
       compatible = "zmk,keymap";
@@ -142,7 +150,7 @@
 //├───┤├───────────┼───────────┼────────────┼────────────┼─────┤ ├─────┼────────────┼────────────┼───────────┼───────────┤├───┤
    XXX  AS(Z)       AS(X)       AS(C)        AS(V)        AS(B)   AS(K) AS(M)        &mm_comma &mm_dot  &kp FSLH     XXX
 //╰───╯╰───────────┴───────────┼────────────┼────────────┼─────┤ ├─────┼────────────┼────────────┴───────────┴───────────╯╰───╯
-                                &kp TAB      NAV_BSPC     &td0    &td1  &kp SPACE    &kp TAB 
+                                &kp TAB      NAV_BSPC     MO_TOG(1) MO_TOG(2)  &kp SPACE    &kp TAB 
 //                             ╰────────────┴────────────┴─────╯ ╰─────┴────────────┴────────────╯
 >;
                 };

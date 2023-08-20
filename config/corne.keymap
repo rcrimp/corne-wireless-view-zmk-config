@@ -14,11 +14,14 @@
 #define NUM_L 2
 #define HARDWARE_L 3
 
-#define NAV_LEFT  &mt_home 0   LEFT    // tap: left  | long-tap: beginning of line
-#define NAV_RIGHT &mt_end 0    RIGHT   // tap: right | long-tap: end       of line
+#define NAV_LEFT  &mt HOME   LEFT    // tap: left  | long-tap: beginning of line
+#define NAV_RIGHT &mt END    RIGHT   // tap: right | long-tap: end       of line
 #define NAV_UP    &mt LC(HOME) UP      // tap: up    | long-tap: beginning of document
 #define NAV_DOWN  &mt LC(END)  DOWN    // tap: down  | long-tap: end       of document
 #define NAV_BSPC  &mt LC(BSPC) BSPC    // tap: bspc  | long-tap: delete word backward
+
+#define XXX &none
+#define ___ &trans
 
 / {
    conditional_layers {
@@ -106,7 +109,7 @@
    &none  HM(LGUI, A) HM(LALT, R) HM(LCTRL, S) HM(LSHFT, T) AS(D)   AS(H) HM(RSHFT, N) HM(RCTRL, E) HM(RALT, I) HM(RGUI, O)  &none
 //├─────┤├───────────┼───────────┼────────────┼────────────┼─────┤ ├─────┼────────────┼────────────┼───────────┼───────────┤├─────┤
    &none  AS(Z)       AS(X)       AS(C)        AS(V)        AS(B)   AS(K) AS(M)        &kp COMMA    &kp DOT     &kp FSLH     &none
-//╰─────╯╰───────────┴───────────┼────────────┼────────────┼─────┤ ├─────┼────────────┼────────────┴───────────────────────╯╰─────╯
+//╰─────╯╰───────────┴───────────┼────────────┼────────────┼─────┤ ├─────┼────────────┼────────────┴───────────┴───────────╯╰─────╯
                                   &kp TAB      NAV_BSPC     &td0    &td1  &kp SPACE    &kp TAB 
 //                               ╰────────────┴────────────┴─────╯ ╰─────┴────────────┴────────────╯
 >;
@@ -120,7 +123,7 @@
    &none  &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &kp PLUS    &tdqt     &kp LPAR      &kp LBRC &kp LBKT &kp GT  &none
 //├─────┤├────────┼────────┼─────────┼─────────┼─────────┤ ├─────────┼─────────────┼────────┼────────┼──────┤├─────┤
    &none  &none    &none    &kp EQUAL &kp TILDE &kp MINUS   &kp UNDER &kp PIPE      &trans   &trans   &trans  &none
-//╰─────╯╰────────┴────────┼─────────┼─────────┼─────────┤ ├─────────┼─────────────┼────────┴───────────────╯╰─────╯
+//╰─────╯╰────────┴────────┼─────────┼─────────┼─────────┤ ├─────────┼─────────────┼────────┴────────┴──────╯╰─────╯
                           	 &trans    &trans    &trans      &trans    &trans        &trans
 //                         ╰─────────┴─────────┴─────────╯ ╰─────────┴─────────────┴────────╯
 >;
@@ -129,15 +132,15 @@
       num_layer {
          label = "Fn <v^>";
          bindings = <
-//╭─────╮╭────────┬────────┬─────────┬──────────┬───────╮ ╭───────┬────────┬────────┬──────┬─────────╮╭─────╮
-   &none  &kp N1   &kp N2   &kp N3    &kp N4     &kp N5    &kp N6  &kp N7   &kp N8   &kp N9 &kp N0     &none
-//├─────┤├────────┼────────┼─────────┼──────────┼───────┤ ├───────┼────────┼────────┼──────┼─────────┤├─────┤
+//╭─────╮╭────────┬────────┬─────────┬──────────┬───────╮ ╭───────┬────────────┬────────────┬──────────┬─────────────╮╭─────╮
+   &none  &kp N1   &kp N2   &kp N3    &kp N4     &kp N5    &kp N6  &kp N7       &kp N8       &kp N9     &kp N0         &none
+//├─────┤├────────┼────────┼─────────┼──────────┼───────┤ ├───────┼────────────┼────────────┼──────────┼─────────────┤├─────┤
    &none  &kp LGUI &kp LALT &kp LCTRL &kp LSHIFT &kp F11   &kp F12 &kp NAV_LEFT &kp NAV_DOWN &kp NAV_UP &kp NAV_RIGHT  &none
-//├─────┤├────────┼────────┼─────────┼──────────┼───────┤ ├───────┼────────┼────────┼──────┼─────────┤├─────┤
-   &none  &kp F1   &kp F2   &kp F3    &kp F4     &kp F5    &kp F6  &kp F7   &kp F8   &kp F9 &kp F10    &none
-//╰─────╯╰────────┴────────┼─────────┼──────────┼───────┤ ├───────┼────────┼────────┴────────────────╯╰─────╯
-                    	       &trans    &trans     &trans    &trans  &trans   &trans
-//                         ╰─────────┴──────────┴───────╯ ╰───────┴────────┴────────╯
+//├─────┤├────────┼────────┼─────────┼──────────┼───────┤ ├───────┼────────────┼────────────┼──────────┼─────────────┤├─────┤
+   &none  &kp F1   &kp F2   &kp F3    &kp F4     &kp F5    &kp F6  &kp F7       &kp F8       &kp F9     &kp F10        &none
+//╰─────╯╰────────┴────────┼─────────┼──────────┼───────┤ ├───────┼────────────┼────────────┴──────────┴─────────────╯╰─────╯
+                    	       &trans    &trans     &trans    &trans  &trans       &trans
+//                         ╰─────────┴──────────┴───────╯ ╰───────┴────────────┴────────────╯
 >;
       };
       hw_layer {

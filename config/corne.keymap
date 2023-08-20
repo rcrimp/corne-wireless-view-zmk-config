@@ -7,12 +7,12 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-// #include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/mouse.h>
 
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
 #define HM(k1, k2) &hm k1 k2     // Homerow Mods Macro
 
-#define BASE 0
+#define HOME 0
 #define FUNCTIONS   1
 #define SYMBOLS   2
 
@@ -82,7 +82,7 @@
    keymap {
       compatible = "zmk,keymap";
       default_layer {
-         label = "Base";
+         label = "Home";
          bindings = <
 // -----------------------------------------------------------------------------------------
 // |  --  |  Q  |  W  |  F  |  P  |  G  |   |  J  |  L   |  U      |  Y    |  ;     |  --  |

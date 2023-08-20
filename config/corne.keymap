@@ -96,17 +96,17 @@
    &none  &kp EXCL &kp AT   &kp HASH  &kp DOLLAR &kp PERCENT &kp CARET &kp AMPERSAND &kp STAR &none    &trans &none
    &none  &kp LGUI &kp LALT &kp LCTRL &kp LSHIFT &kp PLUS    &kp SQT   &kp LPAR      &kp LBRC &kp LBKT &kp GT &none
    &none  &none    &none    &kp EQUAL &kp TILDE  &kp MINUS   &kp UNDER &kp PIPE      &trans   &trans   &trans &none
-                          	  &trans    &trans    &trans      &trans   &trans    &trans
+                          	 &trans    &trans     &trans      &trans    &trans        &trans
                         >;
       };
 
       num_layer {
          label = "Numbers";
          bindings = <
-   &none  &kp F1 &kp F2            &kp F3          &kp F4     &kp F5  &kp F6          &kp F7   &kp F8   &kp F9   &kp F10   &none
-   &none  &none  &kp K_VOLUME_DOWN &kp K_VOLUME_UP &kp K_MUTE &kp F11 &kp F12         &kp LEFT &kp DOWN &kp UP   &kp RIGHT &none
-   &none  &none  &kp C_BRI_DN      &kp C_BRI_UP    &none      &none   &kp PRINTSCREEN &none    &none    &none    &none     &none
-                    	              &trans          &trans     &trans  &trans          &trans   &trans
+   &none  &kp N1   &kp N2   &kp N3    &kp N4     &kp N5  &kp N6  &kp N7   &kp N8   &kp N9 &kp N0    &none
+   &none  &kp LGUI &kp LALT &kp LCTRL &kp LSHIFT &kp F11 &kp F12 &kp LEFT &kp DOWN &kp UP &kp RIGHT &none
+   &none  &kp F1   &kp F2   &kp F3    &kp F4     &kp F5  &kp F6  &kp F7   &kp F8   &kp F9 &kp F10   &none
+                    	       &trans    &trans     &trans  &trans  &trans   &trans
          >;
       };
       hw_layer {

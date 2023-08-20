@@ -46,20 +46,20 @@
    // };
    behaviors {
       td0: tap_dance_0 {
-         compatible = "zmk,behavior-tap-dance";
+         compatible = "zmk,behavior-hold-tap";
          label = "TAP_DANCE_0";
          #binding-cells = <0>;
-         tapping-term-ms = <200>;
          flavor = "hold-preferred";
-         bindings = <&lt 1 DELETE>, <&tog 1>, <&to 0>;
+         tapping-term-ms = <200>;
+         bindings = <&mo 1>, <&kp DELETE>;
       };
       td1: tap_dance_1 {
-         compatible = "zmk,behavior-tap-dance";
+         compatible = "zmk,behavior-hold-tap";
          label = "TAP_DANCE_1";
          #binding-cells = <0>;
-         tapping-term-ms = <200>;
          flavor = "hold-preferred";
-         bindings = <&lt 2 RETURN>, <&tog 2>, <&to 0>;
+         tapping-term-ms = <200>;
+         bindings = <&mo 2>, <&kp RETURN>;
       };
       // tdbs: tap_dance_bs {
       //    compatible = "zmk,behavior-tap-dance";

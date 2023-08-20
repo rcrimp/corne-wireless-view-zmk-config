@@ -138,7 +138,7 @@
 //├───┤├───────────┼───────────┼────────────┼────────────┼─────┤ ├─────┼────────────┼────────────┼───────────┼───────────┤├───┤
    XXX  HM(LGUI, A) HM(LALT, R) HM(LCTRL, S) HM(LSHFT, T) AS(D)   AS(H) HM(RSHFT, N) HM(RCTRL, E) HM(RALT, I) HM(RGUI, O)  XXX
 //├───┤├───────────┼───────────┼────────────┼────────────┼─────┤ ├─────┼────────────┼────────────┼───────────┼───────────┤├───┤
-   XXX  AS(Z)       AS(X)       AS(C)        AS(V)        AS(B)   AS(K) AS(M)        &comma_morph &dot_morph  &kp FSLH     XXX
+   XXX  AS(Z)       AS(X)       AS(C)        AS(V)        AS(B)   AS(K) AS(M)        &mm_comma &mm_dot  &kp FSLH     XXX
 //╰───╯╰───────────┴───────────┼────────────┼────────────┼─────┤ ├─────┼────────────┼────────────┴───────────┴───────────╯╰───╯
                                 &kp TAB      NAV_BSPC     &td0    &td1  &kp SPACE    &kp TAB 
 //                             ╰────────────┴────────────┴─────╯ ╰─────┴────────────┴────────────╯
@@ -148,7 +148,7 @@
          label = "Symbols";
          bindings = <
 //╭───╮╭────────┬────────┬─────────┬─────────┬─────────╮ ╭─────────┬─────────────┬────────┬────────┬──────╮╭───╮
-   XXX  &bang_morph &kp AT   &kp HASH  &kp DLLR  &kp PRCNT   &kp CARET &kp AMPERSAND &kp STAR XXX      ___     XXX
+   XXX  &mm_bang &kp AT   &kp HASH  &kp DLLR  &kp PRCNT   &kp CARET &kp AMPERSAND &kp STAR XXX      ___     XXX
 //├───┤├────────┼────────┼─────────┼─────────┼─────────┤ ├─────────┼─────────────┼────────┼────────┼──────┤├───┤
    XXX  &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &kp PLUS    &tdqt     &kp LPAR      &kp LBRC &kp LBKT &kp GT  XXX
 //├───┤├────────┼────────┼─────────┼─────────┼─────────┤ ├─────────┼─────────────┼────────┼────────┼──────┤├───┤

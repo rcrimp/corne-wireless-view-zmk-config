@@ -49,12 +49,12 @@
          tapping-term-ms = <200>;
          bindings = <&lt 2 RETURN>, <&tog 2>, <&to 0>;
       };
-      td2: tap_dance_2 {
+      tdbs: tap_dance_bs {
          compatible = "zmk,behavior-tap-dance";
-         label = "TAP_DANCE_2";
+         label = "TAP_DANCE_BS";
          #binding-cells = <0>;
          tapping-term-ms = <200>;
-         bindings = <&kp BACKSPACE>, <&delete_word>, <&kp DELETE>;
+         bindings = <&kp BACKSPACE>, <&delete_word>;
       };
       tdu: tap_dance_U {
          compatible = "zmk,behavior-tap-dance";
@@ -101,7 +101,7 @@
 //├─────┤├───────────┼───────────┼────────────┼────────────┼─────┤ ├─────┼────────────┼────────────┼───────────┼───────────┤├─────┤
    &none  AS(Z)       AS(X)       AS(C)        AS(V)        AS(B)   AS(K) AS(M)        &kp COMMA    &kp DOT     &kp FSLH     &none
 //╰─────╯╰───────────┴───────────┼────────────┼────────────┼─────┤ ├─────┼────────────┼────────────┴───────────────────────╯╰─────╯
-                                  &kp TAB      &td2         &td0    &td1  &kp SPACE    &kp TAB 
+                                  &kp TAB      &tdbs        &td0    &td1  &kp SPACE    &kp TAB 
 //                               ╰────────────┴────────────┴─────╯ ╰─────┴────────────┴────────────╯
 >;
                 };
@@ -121,7 +121,7 @@
       };
 
       num_layer {
-         label = "Numbers";
+         label = "Fn <v^>";
          bindings = <
 //╭─────╮╭────────┬────────┬─────────┬──────────┬───────╮ ╭───────┬────────┬────────┬──────┬─────────╮╭─────╮
    &none  &kp N1   &kp N2   &kp N3    &kp N4     &kp N5    &kp N6  &kp N7   &kp N8   &kp N9 &kp N0     &none
@@ -135,7 +135,7 @@
 >;
       };
       hw_layer {
-         label = "Hardware";
+         label = "System";
          bindings = <
 //╭─────╮╭──────────┬──────────┬────────┬────────────┬────────────╮ ╭────────────┬────────────┬────────────┬────────────┬────────────╮╭─────╮
    &none  &none      &none      &none    &kp K_VOL_UP &kp C_BRI_UP   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4  &none

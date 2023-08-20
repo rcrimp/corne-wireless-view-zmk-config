@@ -24,11 +24,11 @@
 #define NUM_L 2
 #define HARDWARE_L 3
 
-#define NAV_LEFT  &mt HOME   LEFT    // tap: left  | long-tap: beginning of line
-#define NAV_RIGHT &mt END    RIGHT   // tap: right | long-tap: end       of line
-#define NAV_UP    &mt LC(HOME) UP      // tap: up    | long-tap: beginning of document
-#define NAV_DOWN  &mt LC(END)  DOWN    // tap: down  | long-tap: end       of document
-#define NAV_BSPC  &mt LC(BSPC) BSPC    // tap: bspc  | long-tap: delete word backward
+#define NAV_LEFT  &mt HOME   LEFT   // tap: left  | long-tap: start of line
+#define NAV_RIGHT &mt END    RIGHT  // tap: right | long-tap: end   of line
+#define NAV_UP    &mt LC(HOME) UP   // tap: up    | long-tap: start of document
+#define NAV_DOWN  &mt LC(END)  DOWN // tap: down  | long-tap: end   of document
+#define NAV_BSPC  &mt LC(BSPC) BSPC // tap: bspc  | long-tap: delete prev word
 
 #define MO_TOG(layer) &mo_tog layer layer
 
@@ -174,7 +174,7 @@
 //├───┤├───────────┼───────────┼────────────┼────────────┼─────┤ ├─────┼────────────┼────────────┼───────────┼───────────┤├───┤
    XXX  AS(Z)       AS(X)       AS(C)        AS(V)        AS(B)   AS(K) AS(M)        &mm_comma &mm_dot  &kp FSLH     XXX
 //╰───╯╰───────────┴───────────┼────────────┼────────────┼─────┤ ├─────┼────────────┼────────────┴───────────┴───────────╯╰───╯
-                                &kp TAB      NAV_BSPC     MO_TOG(1) MO_TOG(2)  &kp SPACE    &kp TAB 
+                                &kp TAB      NAV_BSPC     &lt 1 DELETE &lt 2 RETURN &kp SPACE    &kp TAB 
 //                             ╰────────────┴────────────┴─────╯ ╰─────┴────────────┴────────────╯
 >;
                 };

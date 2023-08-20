@@ -91,10 +91,16 @@
       home_layer {
          label = "Home";
          bindings = <
-   &none  AS(Q) AS(W) AS(F) AS(P) AS(G)     AS(J) AS(L)  &tdu AS(Y) &kp ESCAPE &none
-   &none  HM(LGUI, A) HM(LALT, R) HM(LCTRL, S) HM(LSHIFT, T) AS(D)  AS(H) HM(RSHIFT, N) HM(RCTRL, E) HM(RALT, I) HM(RGUI, O) &none
-   &none  AS(Z) AS(X) AS(C) AS(V) AS(B)     AS(K) AS(M)  &kp COMMA &kp DOT &kp FSLH &none
-                      &kp TAB &td2 &td0   &td1 &kp SPACE &kp RETURN
+//╭─────╮╭───────────┬───────────┬────────────┬─────────────┬─────╮ ╭─────┬─────────────┬────────────┬───────────┬───────────╮╭──────╮
+   &none  AS(Q)       AS(W)       AS(F)        AS(P)         AS(G)   AS(J) AS(L)         &tdu         AS(Y)       &kp ESCAPE   &none
+//├─────┤├───────────┼───────────┼────────────┼─────────────┼─────┤ ├─────┼─────────────┼────────────┼───────────┼───────────┤├──────┤
+   &none  HM(LGUI, A) HM(LALT, R) HM(LCTRL, S) HM(LSHIFT, T) AS(D)   AS(H) HM(RSHIFT, N) HM(RCTRL, E) HM(RALT, I) HM(RGUI, O)  &none
+//├─────┤├───────────┼───────────┼────────────┼─────────────┼─────┤ ├─────┼─────────────┼────────────┼───────────┼───────────┤├──────┤
+   &none  AS(Z)       AS(X)       AS(C)        AS(V)         AS(B)   AS(K) AS(M)         &kp COMMA    &kp DOT     &kp FSLH     &none
+//╰─────╯╰───────────┴───────────┼────────────┼─────────────┼─────┤ ├─────┼─────────┼────────────────┴───────────────────────╯╰──────╯
+                                  &kp TAB      &td2          &td0    &td1  &kp SPACE     &kp RETURN 
+//                               ╰────────────┴─────────────┴─────╯ ╰─────┴─────────┴────────────────╯
+
                         >;
                 };
       sym_layer {

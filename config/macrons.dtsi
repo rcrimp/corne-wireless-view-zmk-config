@@ -1,0 +1,6 @@
+/* Te Reo macrons */
+ZMK_UNICODE_PAIR(mi_a_macron, N0, N1, N0, N1,  N0, N1, N0, N0)  // ā/Ā
+ZMK_UNICODE_PAIR(mi_e_macron, N0, N1, N1, N3,  N0, N1, N1, N2)  // ē/Ē
+ZMK_UNICODE_PAIR(mi_i_macron, N0, N1, N2, B,   N0, N1, N2, A)  // ī/Ī
+ZMK_UNICODE_PAIR(mi_o_macron, N0, N1, N4, D,   N0, N1, N4, C)  // ō/Ō
+ZMK_UNICODE_PAIR(mi_u_macron, N0, N1, N6, B,   N0, N1, N6, A)  // ū/Ū

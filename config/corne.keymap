@@ -56,12 +56,12 @@
          tapping-term-ms = <200>;
          bindings = <&kp BACKSPACE>, <&delete_word>;
       };
-      tdu: tap_dance_U {
+      tdqt: tap_dance_qt {
          compatible = "zmk,behavior-tap-dance";
-         label = "TAP_DANCE_U";
+         label = "TAP_DANCE_QT";
          #binding-cells = <0>;
          tapping-term-ms = <200>;
-         bindings = <&kp U>, <&kp U>, <&kp U>;
+         bindings = <&kp SQT>, <&kp DQT>, <&kp GRAVE>;
       };
       as: auto_shift {
          compatible = "zmk,behavior-hold-tap";
@@ -95,7 +95,7 @@
          label = "Home";
          bindings = <
 //╭─────╮╭───────────┬───────────┬────────────┬────────────┬─────╮ ╭─────┬────────────┬────────────┬───────────┬───────────╮╭─────╮
-   &none  AS(Q)       AS(W)       AS(F)        AS(P)        AS(G)   AS(J) AS(L)        &tdu         AS(Y)       &kp ESCAPE   &none
+   &none  AS(Q)       AS(W)       AS(F)        AS(P)        AS(G)   AS(J) AS(L)        AS(U)        AS(Y)       &kp ESCAPE   &none
 //├─────┤├───────────┼───────────┼────────────┼────────────┼─────┤ ├─────┼────────────┼────────────┼───────────┼───────────┤├─────┤
    &none  HM(LGUI, A) HM(LALT, R) HM(LCTRL, S) HM(LSHFT, T) AS(D)   AS(H) HM(RSHFT, N) HM(RCTRL, E) HM(RALT, I) HM(RGUI, O)  &none
 //├─────┤├───────────┼───────────┼────────────┼────────────┼─────┤ ├─────┼────────────┼────────────┼───────────┼───────────┤├─────┤
@@ -111,7 +111,7 @@
 //╭─────╮╭────────┬────────┬─────────┬─────────┬─────────╮ ╭─────────┬─────────────┬────────┬────────┬──────╮╭─────╮
    &none  &kp EXCL &kp AT   &kp HASH  &kp DLLR  &kp PRCNT   &kp CARET &kp AMPERSAND &kp STAR &none    &trans  &none
 //├─────┤├────────┼────────┼─────────┼─────────┼─────────┤ ├─────────┼─────────────┼────────┼────────┼──────┤├─────┤
-   &none  &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &kp PLUS    &kp SQT   &kp LPAR      &kp LBRC &kp LBKT &kp GT  &none
+   &none  &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &kp PLUS    &tdqt     &kp LPAR      &kp LBRC &kp LBKT &kp GT  &none
 //├─────┤├────────┼────────┼─────────┼─────────┼─────────┤ ├─────────┼─────────────┼────────┼────────┼──────┤├─────┤
    &none  &none    &none    &kp EQUAL &kp TILDE &kp MINUS   &kp UNDER &kp PIPE      &trans   &trans   &trans  &none
 //╰─────╯╰────────┴────────┼─────────┼─────────┼─────────┤ ├─────────┼─────────────┼────────┴───────────────╯╰─────╯
